@@ -1,11 +1,11 @@
 const express = require('express');
 // const { MongoClient } = require('mongodb');
-// const cors = require('cors');
+const cors = require('cors');
 // const ObjectId = require('mongodb').ObjectId;
 const app = express();
 const port = 5000;
 
-// app.use(cors());
+app.use(cors());
 // app.use(express.json());
 
 //user:question-bank
@@ -25,6 +25,7 @@ const port = 5000;
 
 app.get('/question', (req, res) => {
     res.send({
+
         quiz: [
             {
                 id: 0,
